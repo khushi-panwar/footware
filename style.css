@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+
+html, body , .container {
+    height: 100%;
+    width:  100%;
+    /* background-color:floralwhite; */
+}
+
+/* upperLine */
+#upperLine {
+    height: 30px;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    padding: 0 30px;
+}
+
+
+#upperLeft span{
+    border-right: 1px solid #fff;
+    padding: 0 15px;
+}
+
+#upperRight select {
+    height: 25px;
+    min-width: 60px;
+    font-size: 10px;
+    border: none;
+    background-color: transparent;
+    border-radius: 25px;
+    color: #fff;
+}
+
+#upperRight option {
+    color: #111;
+    border: none;
+    text-align: center;
+}
+
+
+/* header - logo +search box + bell icon + card item + profile */
+
+header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    border-bottom: 1px solid #e3dbdb;
+}
+
+#headLeft {
+    min-width: 70%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+i {
+    padding: 5px;
+}
+
+#searchItem {
+    display: flex;
+    align-items: center;
+}
+
+#Item {
+    margin: 0 10px;
+    width: 90%;
+}
+
+#searchItem input {
+    border: none;
+}
+#searchItem input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#searchItem {
+    min-width: 150px;
+    width: 500px;
+    border: 1px solid #e3dbdb;
+    border-radius: 25px;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+#headRight {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2%;
+}
+
+#cart {
+    border-radius: 25px;
+    background-color: #e5e3e3d8;
+    padding: 5px 10px;
+}
