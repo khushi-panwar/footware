@@ -6,18 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footware funz</title>
     <link rel="stylesheet" href="style.css">
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
-    rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body>
     <div class="container">
-        <div id="upperLine">
+        <div id="top-bar">
             <div id="upperLeft">
-                <span>Start Selling</span>
-                <span>Help Center</span>
-                <span>Download Footwear App</span>
+                <a href="#">Start Selling</a>
+                <a href="#">Help Center</a>
+                <a href="#">Download Footwear App</a>
             </div>
             <div id="upperRight">
                 <select name="language" id="language">
@@ -31,30 +29,59 @@
         <header>
             <div id="headLeft">
                 <i class="ri-bluesky-line"></i>
-            <div id="searchItem">
-                <input type="text" id="Item" placeholder="try 'Nike Air Jordan'">
-                <div id="searchIcon">
-                    <i class="ri-search-2-line"></i>
+                <div id="searchItem">
+                    <input type="text" id="Item" placeholder="try 'Nike Air Jordan'">
+                    <div id="searchIcon">
+                        <i class="ri-search-2-line"></i>
+                    </div>
                 </div>
-            </div>
             </div>
             <div id="headRight">
                 <div id="notify">
-                <i class="ri-notification-4-line"></i>
+                    <i class="ri-notification-4-line"></i>
                 </div>
-            <div id="cart">
-                <i class="ri-shopping-bag-fill"></i>
-                <span>2 items</spam>
-            </div>
-            <i class="line"></i>
-            <div id="profile">
-                <i class="ri-account-circle-fill"></i>
-                <span>name</span>
-            </div>
+                <div id="cart">
+                    <i class="ri-shopping-bag-fill"></i>
+                    <span>2 items</spam>
+                </div>
+                <i class="line"></i>
+                <div id="profile">
+                    <i class="ri-account-circle-fill"></i>
+                    <span>name</span>
+                </div>
             </div>
         </header>
-        <div id="main"></div>
-        <div id="featured"></div>
+        <div id="main">
+            <div id="main-left">
+                <h2>NEW ARRIVAL!</h2>
+                <h1>AIR JORDAN 6 G X EASTSIDE</h1>
+                <p class="main-discription-arrival">jhgfjasgjshcvshcjshchjasbcdchjbsjc</p>
+                <button class="btn">View product</button>
+            </div>
+            <div id="main-right">
+                <img src="" alt="shoe">
+                <div id="main-inner">
+                    <h2>DISC UP TO 50% FOR SNEAKERS FEST ID 2023</h2>
+                    <p class="main-discription-disc">jhdbvscjhubwjhecuyagb</p>
+                    <button class="btn">Event details</button>
+                </div>
+            </div>
+        </div>
+        <div id="deals-section">
+            <div id="deals-header">
+                <h3>Today's Best Deals!</h3>
+                <div class="deal-timer">Ends in: <span>12 : 10 : 09</span></div>
+            </div>
+            <div class="deals-wrapper">
+                <button class="deals-nav left" aria-label="scroll left">‹</button>
+
+                <div id="deal-card">
+                    <div class="deal-item"></div>
+                </div>
+
+                <button class="deals-nav right" aria-label="scroll right">›</button>
+            </div>
+        </div>
         <div id="category"></div>
         <div id="products"></div>
         <footer></footer>

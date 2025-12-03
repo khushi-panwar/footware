@@ -12,7 +12,7 @@ html, body , .container {
 }
 
 /* upperLine */
-#upperLine {
+#top-bar {
     height: 30px;
     background-color: black;
     color: #fff;
@@ -24,9 +24,11 @@ html, body , .container {
 }
 
 
-#upperLeft span{
+#upperLeft a{
     border-right: 1px solid #fff;
     padding: 0 15px;
+    text-decoration: none;
+    color: #fff;
 }
 
 #upperRight select {
@@ -49,7 +51,8 @@ html, body , .container {
 /* header - logo +search box + bell icon + card item + profile */
 
 header {
-    height: 50px;
+    height: 70px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,7 +61,7 @@ header {
 }
 
 #headLeft {
-    min-width: 70%;
+    width: 65%;
     display: flex;
     justify-content:flex-start;
     align-items: center;
@@ -69,13 +72,15 @@ i {
 }
 
 #searchItem {
+    min-width: 150px;
+    width: 700px !important;
     display: flex;
     align-items: center;
 }
 
 #Item {
     margin: 0 10px;
-    width: 90%;
+    /* width: 100%; */
 }
 
 #searchItem input {
@@ -105,6 +110,166 @@ i {
 
 #cart {
     border-radius: 25px;
-    background-color: #e5e3e3d8;
+    background-color: #f6f2f2e4;
     padding: 5px 10px;
+}
+
+
+/* main div - for New Arrival + Discount */
+
+#main {
+    height: 270px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#main-left {
+    background-color: #f6f6f6;
+    height: inherit;
+    width: 65%;
+    margin: 15px 0;
+    border-radius: 25px;
+    padding: 20px;
+
+}
+
+#main-left h2{
+    color: #ff6600;
+    font-size: 16px;
+}
+
+#main-left h1 {
+    font-size: 36px;
+    margin: 10px 0 20px;
+    max-width: 300px;
+}
+
+.main-discription-arrival {
+    color: #9b9b9b;
+    margin: 10px 0 20px;
+    max-height: 150px;
+}
+
+.main-discription-disc{
+    color: #fff;
+    margin: 10px 0 20px;
+    max-height: 150px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #111;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#main-right {
+    width: 33%;
+    height: inherit;
+    margin: 15px 0;
+    background-color: #d8ae8c;
+    border-radius: 25px;
+    position: relative;
+    padding: 20px;
+}
+
+#main-right h2 {
+    color: #fff;
+    font-size: 30px;
+    margin: 10px 0 20px
+}
+#main-inner {
+    position: absolute;
+}
+
+
+/* Shoe deals section */
+#deals-section {
+    height: 250px;
+    background-color: #f6f6f6;
+    margin: 30px 25px;
+    border-radius: 25px;
+    /* padding: 20px; */
+}
+
+#deals-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:18px;
+  gap:12px;
+  padding: 20px 20px  0 20px;
+}
+
+#deals-header h3{ font-size:18px; color:#111;  }
+.deal-timer{
+  padding:6px 10px;
+  border-radius:16px;
+  font-size:10px;
+  font-weight:600;
+  background-color: #ff6600;
+  color: #fff;
+  font-weight: 100;
+}
+
+.deals-wrapper {
+    position: relative;
+    width: 100%;/
+    /* to make it overflow hide*/
+    overflow: hidden;
+   
+}
+
+#deal-card {
+    margin: 20px 0;
+    display: flex;
+    width: 100%;
+     /* to make it overflow */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#deal-card::-webkit-scrollbar{
+    display: none;
+}
+
+/* deal item  */
+
+.deal-item {
+    flex: 0 0 250px;   /* behaves like minmax(250px, …) */
+    width: 100%;
+    height: 170px;
+    background: #fff;
+    border-radius: 20px;
+    margin-left: 20px;
+
+    display: inline-block;
+    overflow: hidden;
+}
+/* deals button */
+.deals-nav{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background:#fff;
+    border:none;
+    width:33px;
+    height:33px;
+    border-radius:50%;
+    box-shadow:0 6px 18px rgba(0,0,0,0.12);
+    cursor:pointer;
+    font-size:22px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:5;
+}
+.deals-nav.left{ 
+    left: 0;
+}
+.deals-nav.right{ 
+    right: 0;
 }
