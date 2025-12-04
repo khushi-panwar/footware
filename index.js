@@ -12,6 +12,7 @@ let filteredProducts = [];
 // dom elements
 const container = document.querySelector("#product-grid")
 const searchInput = document.querySelector("#Item")
+const searchIcon = document.querySelector("#searchIcon");
 
 
 //  Fake API data fetching
@@ -22,7 +23,7 @@ async function fetchProduct() {
 
         if(!response) return console.log("No data rendered!");
         const data = await response.json();
-        console.log(data);
+        // console.log(data); -----------checking
         allProducts = data.products;
         filteredProducts = [...allProducts];
         
@@ -41,9 +42,11 @@ function renderProduct(products){
     container.innerHTML= ""
 
     if (products.length === 0) {
-        container.innerHTML = "<p> No productfound </p>"
+        container.innerHTML = "<p> No product found </p>"
         return;
     }
+    // console.log(products); -------------checking
+    
 
     products.forEach(Item => {
     const div = document.createElement("div");
@@ -65,3 +68,28 @@ function renderProduct(products){
 }
 
 // search functionality 
+function filters(input) {
+    filteredProducts = allProducts.filter((p) => {
+       return p.brand.toLowerCase().includes(input);   // loopHole - always use return explicitly in callbacks else always get undefined  
+    });
+}
+
+// search icon click based searching
+searchIcon.addEventListener("click" ,() => {
+    const val = searchInput.value.toLowerCase();
+    // console.log(val);---------------checking
+
+    filters(val);
+    renderProduct(filteredProducts);
+});
+
+// enter key press based searching
+searchInput.addEventListener("keyup", (e) => { 
+    if (e.key === "Enter"){
+        const val = searchInput.value.toLowerCase();
+    // console.log(val);---------------checking
+
+        filters(val);
+        renderProduct(filteredProducts);
+    }
+})
