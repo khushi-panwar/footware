@@ -227,7 +227,9 @@ i {
 
 #deal-card {
     display: flex; /* horizontal row */
+    height: 180px;
     width: 100%;
+    gap: 20px;
      /* to make it overflow */
     white-space: nowrap;    /* the horizontal scroll */
     overflow-x: auto;
@@ -243,13 +245,29 @@ i {
 
 /* deal item  */
 
-.deal-item {
+#deal-item {
     flex: 0 0 250px;   /* behaves like minmax(250px, …) */
     height: 170px;
     background: #fff;
     border-radius: 20px;
 /* to make it overflow hide */
     overflow: hidden;
+}
+
+#deal-item img {
+    height: 100px;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: contain;
+}
+#deal-item h4{
+    font-size: 12px;
+    text-align: center;
+    margin: 10px;
+}
+#deal-item p{
+    font-size: 12px;
+    text-align: center;
 }
 
 /* ensure the first card doesn't stick to left edge visually  */
